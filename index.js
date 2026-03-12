@@ -1,3 +1,4 @@
+const { Player } = require("discord-player");
 require("dotenv").config();
 const { useHooks } = require("zihooks");
 const path = require("node:path");
