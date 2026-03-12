@@ -1,7 +1,7 @@
 {
 	"name": "saubot",
 	"version": "7.4.3",
-	"description": "Ziji bot discord",
+	"description": "sau bot discord",
 	"main": "index.js",
 	"scripts": {
 		"start": "cross-env NODE_ENV=production node index.js",
