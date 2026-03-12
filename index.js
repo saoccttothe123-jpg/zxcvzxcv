@@ -75,7 +75,7 @@ if (config?.DevConfig?.Giveaway) {
 const initialize = async () => {
 	logger.info("Initializing Ziji Bot...");
 	startup.initHooks();
-
+useHooks.set("functions", new Map());
 	await Promise.all([
 		startup.loadEvents(path.join(__dirname, "events/client"), client),
 		startup.loadEvents(path.join(__dirname, "events/process"), process),
