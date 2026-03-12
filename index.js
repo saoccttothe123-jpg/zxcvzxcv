@@ -5,7 +5,16 @@ const { Player } = require("discord-player");
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates],
-  partials: [Partials.Channel]
+  partials: [
+    Partials.User,
+    Partials.GuildMember,
+    Partials.Message,
+    Partials.Channel
+  ],
+  allowedMentions: {
+    parse: ["users"],
+    repliedUser: false
+  }
 });
 
 client.player = new Player(client);
