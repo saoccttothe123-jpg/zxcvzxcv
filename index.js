@@ -16,7 +16,6 @@ const client = new Client({
     repliedUser: false
   }
 });
-
 client.player = new Player(client);
 
 async function loadExtractors() {
