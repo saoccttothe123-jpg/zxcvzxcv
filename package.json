@@ -46,7 +46,7 @@
 		"discord-gamecord": "^4.4.2",
 		"discord-giveaways": "^6.0.1",
 		"discord.js": "^14.25.1",
-		"discord-player": "^6.0.0",   // Đảm bảo đúng cú pháp JSON
+		"discord-player": "^6.0.0", 
 		"dotenv": "^17.0.0",
 		"express": "^5.1.0",
 		"ffmpeg-static": "^5.2.0",
