@@ -1,4 +1,12 @@
 {
+  "dependencies": {
+    "discord-player": "^6.7.0",
+    "@discord-player/extractor": "^4.5.0",
+    "play-dl": "^1.9.7",
+    "ffmpeg-static": "^5.2.0"
+  }
+}
+{
 	"name": "ziji-bot-discord",
 	"version": "7.4.3",
 	"description": "Ziji bot discord",
