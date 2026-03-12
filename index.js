@@ -1,10 +1,17 @@
+require("dotenv").config();
+
+const { Client, GatewayIntentBits, Partials } = require("discord.js");
 const { Player } = require("discord-player");
-const { DefaultExtractors } = require("@discord-player/extractor");
+
+const client = new Client({
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates],
+  partials: [Partials.Channel]
+});
 
 client.player = new Player(client);
 
 async function loadExtractors() {
-    await client.player.extractors.loadMulti(DefaultExtractors);
+  await client.player.extractors.loadMulti(DefaultExtractors);
 }
 
 loadExtractors();
