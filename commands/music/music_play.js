@@ -75,7 +75,15 @@ module.exports.execute = async ({ interaction, lang }) => {
 	}
 	const commandtype = interaction.options?.getSubcommand();
 	const query = interaction.options?.getString("query");
-	const command = useHooks.get("functions").get("Search");
+	const command = useHooks.get("functions")?.get("Search");
+
+if (!command) {
+	console.error("Search function not found");
+	return interaction.reply({
+		content: "Search system not loaded.",
+		ephemeral: true
+	});
+}
 	const player = getPlayer(interaction.guildId);
 	if (commandtype === "next") {
 		if (player.connection) {
