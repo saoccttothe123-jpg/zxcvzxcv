@@ -3,7 +3,11 @@ const { DefaultExtractors } = require("@discord-player/extractor");
 
 client.player = new Player(client);
 
-await client.player.extractors.loadMulti(DefaultExtractors);
+async function loadExtractors() {
+    await client.player.extractors.loadMulti(DefaultExtractors);
+}
+
+loadExtractors();
 require("dotenv").config();
 const { useHooks } = require("zihooks");
 const path = require("node:path");
